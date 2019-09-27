@@ -1,0 +1,6 @@
+<hello [@initialToRight]="state" name="{{ name }}" (click)="toggle()"></hello>
+<div [@openClose]="isOpen ? 'true' : 'false'">
+  Start editing to see some magic happen :)
+</div>
+
+<pre [@inOut] *ngIf="state === 'toRight'">{{state}}</pre>
