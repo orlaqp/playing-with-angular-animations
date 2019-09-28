@@ -13,6 +13,7 @@ import { KeyframesComponent } from './keyframes/keyframes.component';
 import { QueryStaggerComponent } from './query-stagger/query-stagger.component';
 import { ParallelComponent } from './parallel/parallel.component';
 import { FilterComponent } from './filter/filter.component';
+import { ReusableComponent } from './reusable/reusable.component';
 
 @NgModule({
   imports:      [ 
@@ -27,10 +28,11 @@ import { FilterComponent } from './filter/filter.component';
       { path: 'query', component: QueryStaggerComponent },
       { path: 'parallel', component: ParallelComponent },
       { path: 'filter', component: FilterComponent },
+      { path: 'reusable', component: ReusableComponent },
       { path: 'other', component: OtherComponent }
     ])
   ],
-  declarations: [ AppComponent, HelloComponent, OtherComponent, TransitionsComponent, VoidAnimationsComponent, KeyframesComponent, QueryStaggerComponent, ParallelComponent, FilterComponent ],
+  declarations: [ AppComponent, HelloComponent, OtherComponent, TransitionsComponent, VoidAnimationsComponent, KeyframesComponent, QueryStaggerComponent, ParallelComponent, FilterComponent, ReusableComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
