@@ -11,6 +11,7 @@ import { TransitionsComponent } from './transitions/transitions.component';
 import { VoidAnimationsComponent } from './void-animations/void-animations.component';
 import { KeyframesComponent } from './keyframes/keyframes.component';
 import { QueryStaggerComponent } from './query-stagger/query-stagger.component';
+import { ParallelComponent } from './parallel/parallel.component';
 
 @NgModule({
   imports:      [ 
@@ -23,10 +24,11 @@ import { QueryStaggerComponent } from './query-stagger/query-stagger.component';
       { path: 'void-state', component: VoidAnimationsComponent },
       { path: 'keyframes', component: KeyframesComponent },
       { path: 'query', component: QueryStaggerComponent },
+      { path: 'parallel', component: ParallelComponent },
       { path: 'other', component: OtherComponent }
     ])
   ],
-  declarations: [ AppComponent, HelloComponent, OtherComponent, TransitionsComponent, VoidAnimationsComponent, KeyframesComponent, QueryStaggerComponent ],
+  declarations: [ AppComponent, HelloComponent, OtherComponent, TransitionsComponent, VoidAnimationsComponent, KeyframesComponent, QueryStaggerComponent, ParallelComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

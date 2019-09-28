@@ -37,14 +37,12 @@ import {
   ]
 })
 export class QueryStaggerComponent implements OnInit {
-  // @HostBinding('@pageAnimations')
-  // animatePage = true;
    start = false;
 
   constructor() { }
 
   ngOnInit() {
-    setTimeout(() => this.start = true, 1000);
+    setTimeout(() => this.start = true, 100);
   }
 
 }
