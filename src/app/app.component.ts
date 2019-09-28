@@ -33,7 +33,6 @@ import {
         opacity: 0.5,
         backgroundColor: 'blue'
       })),
-      // ...
       
     ])
   ]

@@ -32,11 +32,11 @@ import {
     ]),
     transition('* => void', [
       group([
-        animate('0.3s ease', style({
+        animate('0.8s ease', style({
           transform: 'translateX(50px)',
           width: 10
         })),
-        animate('0.3s 0.2s ease', style({
+        animate('0.8s 0.2s ease', style({
           opacity: 0
         }))
       ])

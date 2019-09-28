@@ -1,0 +1,11 @@
+<div [@filterAnimation]="totalItems">
+
+  <input type="text" [formControl]="query">
+
+  <ng-container *ngIf="filteredItems$ | async as items">
+    <ul>
+      <li *ngFor="let i of items">{{i}}</li>
+    </ul>
+  </ng-container>
+
+</div>

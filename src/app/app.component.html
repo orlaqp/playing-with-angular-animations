@@ -1,19 +1,24 @@
-<h1>Navigation</h1>
+<div class="sample-app">
 
-<a routerLink="/transitions">Basic Transitions</a>
-<br>
-<a routerLink="/void-state">Void Animations / Events</a>
-<br>
-<a routerLink="/keyframes">Key Frames</a>
-<br>
-<a routerLink="/query">Query / Stagger</a>
-<br>
-<a routerLink="/parallel">Group (parallel animations)</a>
+  <h1>Sample Animations</h1>
 
-<div class="container">
-  <router-outlet></router-outlet>
+  <a routerLink="/transitions">Basic Transitions</a>
+  <br>
+  <a routerLink="/void-state">Void Animations / Events</a>
+  <br>
+  <a routerLink="/keyframes">Key Frames</a>
+  <br>
+  <a routerLink="/query">Query / Stagger (Sequential animations)</a>
+  <br>
+  <a routerLink="/parallel">Group (parallel animations)</a>
+  <br>
+  <a routerLink="/filter">Filtering list (increment, decrement)</a>
+
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
 </div>
-
 
 
 <!-- 

@@ -2,8 +2,12 @@ p {
   font-family: Lato;
 }
 
+.sample-app {
+  margin: 20px;
+}
+
 .container {
-  margin: 40px;
+  margin: 40px 0;
   background-color: #eee;
   padding: 40px;
 }

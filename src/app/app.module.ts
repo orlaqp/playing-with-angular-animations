@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 
@@ -12,12 +12,13 @@ import { VoidAnimationsComponent } from './void-animations/void-animations.compo
 import { KeyframesComponent } from './keyframes/keyframes.component';
 import { QueryStaggerComponent } from './query-stagger/query-stagger.component';
 import { ParallelComponent } from './parallel/parallel.component';
+import { FilterComponent } from './filter/filter.component';
 
 @NgModule({
   imports:      [ 
     BrowserModule,
     BrowserAnimationsModule,
-    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: AppComponent },
       { path: 'transitions', component: TransitionsComponent },
@@ -25,10 +26,11 @@ import { ParallelComponent } from './parallel/parallel.component';
       { path: 'keyframes', component: KeyframesComponent },
       { path: 'query', component: QueryStaggerComponent },
       { path: 'parallel', component: ParallelComponent },
+      { path: 'filter', component: FilterComponent },
       { path: 'other', component: OtherComponent }
     ])
   ],
-  declarations: [ AppComponent, HelloComponent, OtherComponent, TransitionsComponent, VoidAnimationsComponent, KeyframesComponent, QueryStaggerComponent, ParallelComponent ],
+  declarations: [ AppComponent, HelloComponent, OtherComponent, TransitionsComponent, VoidAnimationsComponent, KeyframesComponent, QueryStaggerComponent, ParallelComponent, FilterComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
