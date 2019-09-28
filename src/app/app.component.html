@@ -1,6 +1,24 @@
-<hello [@initialToRight]="state" name="{{ name }}" (click)="toggle()"></hello>
+<h1>Navigation</h1>
+
+<a routerLink="/transitions">Transitions</a>
+<br>
+<a routerLink="/void-state">Void Animations</a>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+
+
+<!-- 
 <div [@openClose]="isOpen ? 'true' : 'false'">
   Start editing to see some magic happen :)
 </div>
 
-<pre [@inOut] *ngIf="state === 'toRight'">{{state}}</pre>
+<pre *ngIf="state === 'toRight'"
+  [@inOut]
+  (@inOut.start)="onAnimationEvent($event)"
+  (@inOut.done)="onAnimationEvent($event)"
+>{{state}}</pre>
+
+<div class="box" [@openClose2]="state === 'initial' ? 'open' : 'close'"></div> -->
