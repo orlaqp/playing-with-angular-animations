@@ -20,6 +20,7 @@ import { KeyframesComponent } from './keyframes/keyframes.component';
       { path: '', component: AppComponent },
       { path: 'transitions', component: TransitionsComponent },
       { path: 'void-state', component: VoidAnimationsComponent },
+      { path: 'keyframes', component: KeyframesComponent },
       { path: 'other', component: OtherComponent }
     ])
   ],

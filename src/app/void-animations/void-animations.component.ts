@@ -3,7 +3,8 @@ import {
   trigger,
   transition,
   style,
-  animate
+  animate,
+  AnimationEvent
 } from '@angular/animations';
 
 @Component({
@@ -15,11 +16,11 @@ import {
       // entering and leaving
       // state('in', style({ transform: 'translateX(0)' })),
       transition(':enter', [
-        style({ transform: 'translateX(-100%)'}),
-        animate(500)
+        style({ transform: 'translateX(-50%)'}),
+        animate(300)
       ]),
       transition(':leave', [
-        animate(300, style({ transform: 'translateX(100%)' }))
+        animate(300, style({ transform: 'translateX(130%)' }))
       ])
     ]),
   ]
@@ -40,10 +41,17 @@ export class VoidAnimationsComponent implements OnInit {
     ];
   }
 
+  addProduct() {
+    this.products.push({ name: 'Extra Product', price: 50 });
+  }
+
   removeProduct(product) {
     this.products = this.products.filter(p => p !== product);
+  }
 
-    if (!this.products.length) this.products = undefined;
+  done(e: AnimationEvent) {
+    if (e.toState === 'void' && !this.products.length)
+      this.products = undefined;
   }
 
 }

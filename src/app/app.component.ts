@@ -21,22 +21,7 @@ import {
       state('false', style({ height: '0px', overflow: 'hidden' })),
       transition('false <=> true', animate(500))
     ]),
-    trigger('usingKeyframes', [
-      transition('* => active', [
-        animate('2s', keyframes([
-          style({ backgroundColor: 'blue' }),
-          style({ backgroundColor: 'red' }),
-          style({ backgroundColor: 'orange' }),
-        ]))
-      ]),
-      transition('* => inactive', [
-        animate('2s', keyframes([
-          style({ backgroundColor: 'orange' }),
-          style({ backgroundColor: 'red' }),
-          style({ backgroundColor: 'blue' }),
-        ]))
-      ])
-    ]),
+    
     trigger('openClose2', [
       state('open', style({
         height: '30px',

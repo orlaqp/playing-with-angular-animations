@@ -1,8 +1,10 @@
 <button *ngIf="!products" (click)="loadProducts()">Load Products</button>
 
 <div class="product-list">
-  <div [@inOut] class="product" *ngFor="let product of products">
+  <div [@inOut] (@inOut.done)="done($event)" class="product" *ngFor="let product of products">
     <p>{{product.name}}</p>
     <button (click)="removeProduct(product)">Remove</button>
   </div>
 </div>
+
+<button *ngIf="products" (click)="addProduct()">Add Product</button>
