@@ -15,7 +15,7 @@ import { pulseAnimation } from './animations';
     trigger('onPulse', [
       transition('normal => pulse', [
         useAnimation(pulseAnimation, {
-          params: { timings: '0.3s', scale: '0.9' }
+          params: { timings: '0.3s', scale: '1.1' }
         })
       ])
     ])

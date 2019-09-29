@@ -21,15 +21,15 @@ import { ReusableComponent } from './reusable/reusable.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: AppComponent },
-      { path: 'transitions', component: TransitionsComponent },
+      { path: '', component: AppComponent, data: { animation: 'HomePage' } },
+      { path: 'transitions', component: TransitionsComponent, data: { animation: 'BasicPage' } },
       { path: 'void-state', component: VoidAnimationsComponent },
       { path: 'keyframes', component: KeyframesComponent },
       { path: 'query', component: QueryStaggerComponent },
       { path: 'parallel', component: ParallelComponent },
       { path: 'filter', component: FilterComponent },
       { path: 'reusable', component: ReusableComponent },
-      { path: 'other', component: OtherComponent }
+      { path: 'other', component: OtherComponent, data: { animation: 'OtherPage'} }
     ])
   ],
   declarations: [ AppComponent, HelloComponent, OtherComponent, TransitionsComponent, VoidAnimationsComponent, KeyframesComponent, QueryStaggerComponent, ParallelComponent, FilterComponent, ReusableComponent ],

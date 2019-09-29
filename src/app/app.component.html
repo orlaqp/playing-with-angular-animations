@@ -15,9 +15,11 @@
   <a routerLink="/filter">Filtering list (increment, decrement)</a>
   <br>
   <a routerLink="/reusable">Reusable (useAnimation)</a>
+  <br>
+  <a routerLink="/other">Animated route</a>
 
-  <div class="container">
-    <router-outlet></router-outlet>
+  <div class="container" [@routeAnimations]="prepareAnimation(outlet)">
+    <router-outlet #outlet="outlet"></router-outlet>
   </div>
 
 </div>

@@ -8,43 +8,23 @@ import {
   AnimationEvent,
   keyframes
 } from '@angular/animations';
+import { RouterOutlet } from '@angular/router';
+import { slideInAnimation } from './route-animations';
 
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
   styleUrls: [ './app.component.css' ],
   animations: [
-
-    
-    trigger('openClose', [
-      state('true', style({ height: '*', overflow: 'hidden' })),
-      state('false', style({ height: '0px', overflow: 'hidden' })),
-      transition('false <=> true', animate(500))
-    ]),
-    
-    trigger('openClose2', [
-      state('open', style({
-        height: '30px',
-        opacity: 1,
-        backgroundColor: 'green'
-      })),
-      state('close', style({
-        // height: '60px',
-        opacity: 0.5,
-        backgroundColor: 'blue'
-      })),
-      
-    ])
+    slideInAnimation
   ]
 })
 export class AppComponent  {
   name = 'Angular';
   state = 'initial';
-  isOpen = true;
 
-  toggle() {
-    this.state = this.state === 'toRight' ? 'initial' : 'toRight';
-    this.isOpen = !this.isOpen;
+  prepareAnimation(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRoute && outlet.activatedRouteData['animation'];
   }
 
   onAnimationEvent ( event: AnimationEvent ) {
