@@ -20,7 +20,7 @@ import {
         animate(300)
       ]),
       transition(':leave', [
-        animate(300, style({ transform: 'translateX(130%)' }))
+        animate(300, style({ transform: 'translateX(130%)', height: '0px' }))
       ])
     ]),
   ]
